@@ -4,7 +4,6 @@ import Project from './Project'
 const MainPage = () => {
   return (
     <div>
-      {' '}
       <HomePage />
       <Project />
     </div>
