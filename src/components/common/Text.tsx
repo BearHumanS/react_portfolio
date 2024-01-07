@@ -4,7 +4,7 @@ import { CSSProperties } from 'react'
 import styled from '@emotion/styled'
 
 interface TextProps {
-  typography: Typography
+  typography?: Typography
   color?: Colors
   display?: CSSProperties['display']
   textAlign?: CSSProperties['textAlign']
