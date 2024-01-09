@@ -1,6 +1,10 @@
 import { css } from '@emotion/react'
 
 export const typographyTable = {
+  t0: css`
+    font-size: 74px;
+    line-height: 1.35;
+  `,
   t1: css`
     font-size: 32px;
     line-height: 1.35;
