@@ -1,3 +1,4 @@
+import Spacing from '@/components/common/Spacing'
 import { breakpoints } from '@/styles/breakPoint'
 import styled from '@emotion/styled'
 import About from './About'
@@ -12,6 +13,7 @@ const MainPage = () => {
     <MainContainer>
       <Header />
       <HomePage />
+      <Spacing size={70} />
       <About />
       <Project />
       <ContactPage />
