@@ -1,11 +1,12 @@
 import { breakpoints } from '@styles/breakPoint'
 import VisitorCounter from '@components/visitorCounter/VisitorCounter'
 import styled from '@emotion/styled'
+import Home from '@/components/home/Home'
 
 const HomePage = () => {
   return (
     <Container id="Home">
-      <div>HomePage</div>
+      <Home />
       <VisitorCounter />
     </Container>
   )
