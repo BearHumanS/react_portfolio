@@ -1,15 +1,15 @@
-import Flex from '@/components/common/Flex'
+import Flex from '@components/common/Flex'
 import { MenuButton } from '@common/navbar/MenuButton'
-import Text from '@/components/common/Text'
+import Text from '@components/common/Text'
 import { breakpoints } from '@/styles/breakPoint'
 import { colors } from '@/styles/color'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useEffect, useState, useRef } from 'react'
-import { Typewriter } from 'react-simple-typewriter'
-import Nav from '@/components/common/navbar/Nav'
+import { Cursor, Typewriter } from 'react-simple-typewriter'
+import Nav from '@components/common/navbar/Nav'
 import { motion } from 'framer-motion'
-import ScrollIndicator from '@/components/common/ScrollIndicator'
+import ScrollIndicator from '@components/common/ScrollIndicator'
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -42,34 +42,42 @@ const Header = () => {
     }
   }, [])
 
+  const moveToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <StyleHeader isSticky={isSticky}>
       <Flex justify="space-between" css={navStyles}>
         <a href="/">
           <Text typography="t1" bold>
             <Typewriter
-              words={['', '남 기 훈']}
+              words={['Nam Ki Hun', '남 기 훈']}
               delaySpeed={1000}
               typeSpeed={200}
             />
+            <Cursor />
           </Text>
         </a>
 
         <Flex css={menutStyles}>
-          <ScrollIndicator targetId="Home">
+          <div onClick={moveToTop}>
             <Text typography="t4">
               <Typewriter
-                words={['', 'Home']}
+                words={['홈', 'Home']}
                 delaySpeed={1000}
                 typeSpeed={200}
               />
             </Text>
-          </ScrollIndicator>
+          </div>
 
           <ScrollIndicator targetId="About">
             <Text typography="t4">
               <Typewriter
-                words={['', 'About']}
+                words={['소개', 'About']}
                 delaySpeed={1000}
                 typeSpeed={200}
               />
@@ -79,7 +87,7 @@ const Header = () => {
           <ScrollIndicator targetId="Project">
             <Text typography="t4">
               <Typewriter
-                words={['', 'Project']}
+                words={['프로젝트', 'Project']}
                 delaySpeed={1000}
                 typeSpeed={200}
               />
@@ -89,7 +97,7 @@ const Header = () => {
           <ScrollIndicator targetId="Contact">
             <Text typography="t4">
               <Typewriter
-                words={['', 'Contact']}
+                words={['연락처', 'Contact']}
                 delaySpeed={1000}
                 typeSpeed={200}
               />
@@ -154,6 +162,10 @@ const navStyles = css`
 const menutStyles = css`
   gap: 14px;
   display: none;
+
+  & span {
+    cursor: pointer;
+  }
 
   @media (min-width: ${breakpoints.md}) {
     display: flex;
