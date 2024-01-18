@@ -1,5 +1,5 @@
 import { breakpoints } from '@/styles/breakPoint'
-import { css, keyframes } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
 import { Cursor } from 'react-simple-typewriter'
@@ -8,6 +8,9 @@ import Flex from '../common/Flex'
 import Spacing from '../common/Spacing'
 import Text from '../common/Text'
 import AnimatedCardComponent from './AnimatedCard'
+import { aboutData } from '@/lib/about'
+import AboutDataRender from './AboutDataRender'
+import { typographyTable } from '@/styles/typography'
 
 const About = () => {
   return (
@@ -17,13 +20,23 @@ const About = () => {
       </Flex>
       <Spacing size={50} direction="horizontal" />
       <Flex direction="column">
-        <motion.div css={AboutTitle}>
-          <Text typography="t2" fontWeight={550}>
+        <motion.div>
+          <Spacing size={20} />
+          <Text typography="t2" fontWeight={550} css={AboutTitle}>
             안녕하세요. 늦깎이 개발자, 남기훈입니다.
             <Cursor />
           </Text>
         </motion.div>
         <DivisionLine />
+        <motion.div>
+          {aboutData.map((data) => (
+            <div key={data.title}>
+              <Spacing size={30} />
+              <AboutDataRender data={data} />
+              <DivisionLine />
+            </div>
+          ))}
+        </motion.div>
       </Flex>
     </AboutFlex>
   )
@@ -37,7 +50,7 @@ const AboutFlex = styled(Flex)`
 
 const AboutTitle = css`
   @media (max-width: ${breakpoints.md}) {
-    margin-top: 20px;
+    ${typographyTable.t4}
   }
 `
 
