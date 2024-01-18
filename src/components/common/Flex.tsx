@@ -7,16 +7,18 @@ interface FlexProps {
   direction?: CSSProperties['flexDirection']
   height?: CSSProperties['height']
   width?: CSSProperties['width']
+  wrap?: CSSProperties['flexWrap']
 }
 
 const Flex = styled.div<FlexProps>(
-  ({ align, justify, direction, height, width }) => ({
+  ({ align, justify, direction, height, width, wrap }) => ({
     display: 'flex',
     alignItems: align,
     justifyContent: justify,
     flexDirection: direction,
     height,
     width,
+    flexWrap: wrap,
   }),
 )
 
