@@ -23,7 +23,6 @@ const AnimatedCardComponent = () => {
       const offsetX = e.clientX - rect.left - rect.width / 2
       const offsetY = e.clientY - rect.top - rect.height / 2
 
-      // 카드 크기에 따른 비율을 계산하여 회전 범위를 조정합니다.
       const xPercent = offsetX / (rect.width / 2)
       const yPercent = offsetY / (rect.height / 2)
 
@@ -48,7 +47,6 @@ const AnimatedCardComponent = () => {
         y: '0',
         transition: { type: 'spring', bounce: 0.4, duration: 1 },
       }}
-      viewport={{ once: true, amount: 0.3 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
