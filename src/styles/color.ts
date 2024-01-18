@@ -12,6 +12,7 @@ export const colorTheme = css`
     --black: #000;
     --grey: #eee;
     --grey2: #a6b5c1;
+    --grey3: #939ba1;
     --yellow: #f79533;
     --pink1: #f37055;
     --pink2: #ef4e7b;
@@ -31,6 +32,7 @@ export const colors = {
   black: 'var(--black)',
   grey: 'var(--grey)',
   grey2: 'var(--grey2)',
+  grey3: 'var(--grey3)',
   yellow: 'var(--yellow)',
   pink1: 'var(--pink1)',
   pink2: 'var(--pink2)',
