@@ -6,6 +6,7 @@ type Description = {
 }
 
 export interface projectDataProps {
+  id: string
   title: string
   stack: string[]
   period: string
@@ -19,10 +20,11 @@ export interface projectDataProps {
   subject: string
 }
 
-type prjectDatas = projectDataProps[]
+type projectDatas = projectDataProps[]
 
-export const prjectData: prjectDatas = [
+export const projectData: projectDatas = [
   {
+    id: 'pokehub',
     title: '포케허브',
     stack: [
       'React',
@@ -53,11 +55,15 @@ export const prjectData: prjectDatas = [
       {
         content: 'lighthouse 성능 점수 개선 진행 중',
       },
+      {
+        content: '반응형 작업 진행 중',
+      },
     ],
     subject:
-      '서버 없이 할 수 있는 프로젝트를 찾다가 Poke API라는  RESTful API를 찾아서 간단한 포켓몬 도감 페이지를 구현하려 하였으나, 차별화를 두기 위해 포켓몬 커뮤니티를 구성하기로 설계 변경하여, Firebase 데이터베이스를 사용하여 사용자의 인증 및 상태관리하고, 포켓몬 도감 및 포켓몬 별 댓글 및 게시판 기능 등을 구현한 프로젝트입니다.',
+      '서버 없이 할 수 있는 프로젝트를 찾다가 Poke API라는  RESTful API를 찾아서 간단한 포켓몬 도감 페이지를 구현하려 하였으나, 차별화를 두기 위해 포켓몬 커뮤니티를 구성하기로 설계 변경하여, Firebase 데이터베이스를 사용해서 사용자의 인증 및 상태관리하고, 포켓몬 도감 및 포켓몬 별 댓글 및 게시판 기능 등을 구현한 프로젝트입니다.',
   },
   {
+    id: 'mycard',
     title: '마이카드',
     stack: [
       'React',
@@ -91,6 +97,7 @@ export const prjectData: prjectDatas = [
       '이용자가 손 쉽게 카드를 신청하기 위한 프로젝트입니다. Firebase를 이용하여 mock데이터를 관리하고 사용자 인증 및 상태를 관리합니다.',
   },
   {
+    id: 'portfolio',
     title: '포트폴리오',
     stack: ['React', 'TypeScript', 'Emotion', 'Framer-motion'],
     period: '2024.01.05 → 진행 중',
