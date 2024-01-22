@@ -39,17 +39,19 @@ const Project = ({ params }: { params: string }) => {
     >
       <motion.div layoutId={`item-motion-${id}`} layout>
         <Link to="/" css={link}>
-          back
+          <Text color="white" typography="t3">
+            back
+          </Text>
         </Link>
         <motion.div css={image} layoutId={`image-motion-${id}`} layout>
           <a href={page} target="_blank" rel="noreferrer">
-            <motion.img src={img} alt={id} whileHover={{ scale: 1.08 }} />
+            <motion.img src={img} alt={id} whileHover={{ scale: 1.04 }} />
           </a>
         </motion.div>
         <div css={content}>
           <motion.div layoutId={`title-motion-${id}`}>
             <Flex direction="column" align="center" width="100%">
-              <motion.div whileHover={{ scale: 1.08 }}>
+              <motion.div whileHover={{ scale: 1.04 }}>
                 <Text typography="t2">
                   <a href={github} target="_blank" rel="noreferrer">
                     <IconGithub />
@@ -109,10 +111,10 @@ const overlay = css`
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 
 const link = css`
-  color: ${colors.white};
   text-align: right;
   display: block;
   margin-bottom: 1vmin;
