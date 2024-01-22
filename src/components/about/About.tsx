@@ -20,14 +20,30 @@ const About = () => {
       </Flex>
       <Spacing size={50} direction="horizontal" />
       <Flex direction="column">
-        <motion.div>
-          <Spacing size={20} />
+        <Spacing size={20} />
+        <motion.div
+          initial={{ opacity: 0, y: '50%' }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ delay: 0.5, duration: 0.8, ease: 'easeInOut' }}
+        >
           <Text typography="t2" fontWeight={550} css={AboutTitle}>
-            안녕하세요. 늦깎이 개발자, 남기훈입니다.
+            안녕하세요. 프론트엔드 개발자, 남기훈입니다.
             <Cursor />
           </Text>
         </motion.div>
-        <DivisionLine />
+        <motion.div
+          initial={{ opacity: 0, translateX: '50%' }}
+          whileInView={{
+            opacity: 1,
+            translateX: 0,
+          }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          <DivisionLine />
+        </motion.div>
         <motion.div>
           {aboutData.map((data) => (
             <div key={data.title}>
