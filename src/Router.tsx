@@ -8,7 +8,7 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" Component={MainPage} />
-        {/*  <Route path="/contact" Component={ContactPage} /> */}
+        <Route path="/:id" Component={MainPage} />
       </Route>
     </Routes>
   )
