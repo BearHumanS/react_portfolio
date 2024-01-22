@@ -10,8 +10,8 @@ const ProjectPage = () => {
     <>
       <ProjectContainer id="Project">
         <AnimatePresence>{id && <Project params={id} />}</AnimatePresence>
+        <List selectedId={id !== undefined ? id : ''} />
       </ProjectContainer>
-      <List selectedId={id !== undefined ? id : ''} />
     </>
   )
 }
@@ -19,6 +19,8 @@ const ProjectPage = () => {
 const ProjectContainer = styled.section`
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
 `
 
 export default ProjectPage
