@@ -11,7 +11,7 @@ interface FlexProps {
 }
 
 const Flex = styled.div<FlexProps>(
-  ({ align, justify, direction, height, width, wrap }) => ({
+  ({ align, justify, direction, height, width, wrap = 'wrap' }) => ({
     display: 'flex',
     alignItems: align,
     justifyContent: justify,
