@@ -10,11 +10,13 @@ import { Cursor, Typewriter } from 'react-simple-typewriter'
 import Nav from '@components/common/navbar/Nav'
 import { motion } from 'framer-motion'
 import ScrollIndicator from '@components/common/ScrollIndicator'
+import { ITEMS } from '@/lib/constants'
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false)
   const [menuBtn, setMenuBtn] = useState(false)
   const [animationComplete, setAnimationComplete] = useState(false)
+  const [activeTab, setActiveTab] = useState('Home')
 
   const containerRef = useRef(null)
 
@@ -42,6 +44,25 @@ const Header = () => {
     }
   }, [])
 
+  const handleScroll = () => {
+    const sections = ['Home', 'About', 'Project', 'Contact']
+    let currentSection = ''
+
+    for (const section of sections) {
+      const element = document.getElementById(section)
+      if (element && window.scrollY >= element.offsetTop - 100) {
+        currentSection = section
+      }
+    }
+
+    setActiveTab(currentSection)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <StyleHeader isSticky={isSticky}>
       <Flex justify="space-between" css={navStyles}>
@@ -57,46 +78,22 @@ const Header = () => {
         </a>
 
         <Flex css={menutStyles}>
-          <ScrollIndicator targetId="Home">
-            <Text typography="t4">
-              <Typewriter
-                words={['홈', 'Home']}
-                delaySpeed={1000}
-                typeSpeed={200}
-              />
-            </Text>
-          </ScrollIndicator>
-
-          <ScrollIndicator targetId="About">
-            <Text typography="t4">
-              <Typewriter
-                words={['소개', 'About']}
-                delaySpeed={1000}
-                typeSpeed={200}
-              />
-            </Text>
-          </ScrollIndicator>
-
-          <ScrollIndicator targetId="Project">
-            <Text typography="t4">
-              <Typewriter
-                words={['프로젝트', 'Project']}
-                delaySpeed={1000}
-                typeSpeed={200}
-              />
-            </Text>
-          </ScrollIndicator>
-
-          <ScrollIndicator targetId="Contact">
-            <Text typography="t4">
-              <Typewriter
-                words={['연락처', 'Contact']}
-                delaySpeed={1000}
-                typeSpeed={200}
-              />
-            </Text>
-          </ScrollIndicator>
+          {ITEMS.map((item) => (
+            <ScrollIndicator targetId={item.en} setActiveTab={setActiveTab}>
+              <Text
+                typography={activeTab === `${item.en}` ? 't3' : 't4'}
+                css={activeTab === `${item.en}` ? activeTabStyle : undefined}
+              >
+                <Typewriter
+                  words={[`${item.ko}`, `${item.en}`]}
+                  delaySpeed={1000}
+                  typeSpeed={200}
+                />
+              </Text>
+            </ScrollIndicator>
+          ))}
         </Flex>
+
         <StylesHamburgerMenu>
           <MenuButton isOpen={menuBtn} onClick={handleSmallScreenNav} />
         </StylesHamburgerMenu>
@@ -110,7 +107,7 @@ const Header = () => {
             onAnimationComplete={handleAnimationComplete}
             ref={containerRef}
           >
-            <Nav onClick={handleSmallScreenNav} />
+            <Nav onClick={handleSmallScreenNav} setActiveTab={setActiveTab} />
           </motion.nav>
         </StyleMenuNavigation>
       </Flex>
@@ -204,5 +201,9 @@ const StyleMenuNavigation = styled.div(
     },
   }),
 )
+
+const activeTabStyle = css`
+  color: ${colors.grey3};
+`
 
 export default Header

@@ -18,7 +18,7 @@ export const typographyTable = {
     line-height: 1.4;
   `,
   t4: css`
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.45;
   `,
   t5: css`

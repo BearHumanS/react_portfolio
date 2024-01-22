@@ -13,11 +13,21 @@ const variants = {
   },
 }
 
-const Nav = ({ onClick }: { onClick: () => void }) => (
+const Nav = ({
+  onClick,
+  setActiveTab,
+}: {
+  onClick: () => void
+  setActiveTab: (value: string) => void
+}) => (
   <motion.ul variants={variants} css={ulStyles}>
     {ITEMS.map((item) => (
-      <ScrollIndicator targetId={item} key={item}>
-        <MenuItem onClick={onClick}>{item}</MenuItem>
+      <ScrollIndicator
+        targetId={item.en}
+        key={item.en}
+        setActiveTab={setActiveTab}
+      >
+        <MenuItem onClick={onClick}>{item.en}</MenuItem>
       </ScrollIndicator>
     ))}
   </motion.ul>
