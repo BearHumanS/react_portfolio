@@ -1,5 +1,5 @@
 import List from '@/components/project/List'
-import Project from '@/components/project/ProjectTest'
+import Project from '@/components/project/ProjectDetail'
 import styled from '@emotion/styled'
 import { AnimatePresence } from 'framer-motion'
 import { useParams } from 'react-router-dom'
