@@ -13,7 +13,7 @@ const AboutContainer = styled.section`
   position: relative;
   height: 100vh;
   width: 100%;
-  margin-top: 70px;
+  overflow-x: hidden;
 `
 
 export default AboutPage
