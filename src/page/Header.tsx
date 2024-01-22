@@ -42,13 +42,6 @@ const Header = () => {
     }
   }, [])
 
-  const moveToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
-
   return (
     <StyleHeader isSticky={isSticky}>
       <Flex justify="space-between" css={navStyles}>
@@ -64,7 +57,7 @@ const Header = () => {
         </a>
 
         <Flex css={menutStyles}>
-          <div onClick={moveToTop}>
+          <ScrollIndicator targetId="Home">
             <Text typography="t4">
               <Typewriter
                 words={['홈', 'Home']}
@@ -72,7 +65,7 @@ const Header = () => {
                 typeSpeed={200}
               />
             </Text>
-          </div>
+          </ScrollIndicator>
 
           <ScrollIndicator targetId="About">
             <Text typography="t4">
@@ -169,6 +162,7 @@ const menutStyles = css`
 
   @media (min-width: ${breakpoints.md}) {
     display: flex;
+    align-items: center;
   }
 `
 
