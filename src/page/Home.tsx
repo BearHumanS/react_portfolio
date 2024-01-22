@@ -20,6 +20,7 @@ const Container = styled.section`
   height: 100vh;
   width: 100%;
   position: relative;
+  top: -70px;
 
   @media (min-width: ${breakpoints.sm}) {
     max-width: 640px;
