@@ -40,13 +40,14 @@ const AnimatedCardComponent = () => {
   return (
     <AnimatedCardContainer
       ref={cardRef}
-      initial={{ opacity: 0, y: '50%' }}
+      initial={{ opacity: 0, x: '-50%' }}
       transition={{ delay: 0.5 }}
       whileInView={{
         opacity: 1,
-        y: '0',
-        transition: { type: 'spring', bounce: 0.4, duration: 1 },
+        x: 0,
+        transition: { type: 'spring', bounce: 0.4, duration: 3 },
       }}
+      viewport={{ amount: 0.3 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
