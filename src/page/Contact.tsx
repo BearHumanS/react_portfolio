@@ -1,7 +1,21 @@
-import React from 'react'
+import Contact from '@/components/contact/Contact'
+import styled from '@emotion/styled'
 
 const ContactPage = () => {
-  return <div id="Contact">테스트</div>
+  return (
+    <ContactContioner id="Contact">
+      <Contact />
+    </ContactContioner>
+  )
 }
+
+const ContactContioner = styled.section`
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 export default ContactPage
