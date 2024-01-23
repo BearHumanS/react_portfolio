@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react'
+import { MouseEvent, useEffect } from 'react'
 import { projectData } from '@/lib/project'
 import { colors } from '@/styles/color'
 import { css } from '@emotion/react'
@@ -13,6 +13,14 @@ import { breakpoints } from '@/styles/breakPoint'
 const Project = ({ params }: { params: string }) => {
   const project = projectData.find((data) => data.id === params)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [])
 
   if (!project) {
     return <div>프로젝트를 찾을 수 없습니다.</div>
@@ -122,12 +130,14 @@ const overlay = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `
 
 const contentBox = css`
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   z-index: 9999;
 `
 
@@ -169,8 +179,11 @@ const content = css`
   background: ${colors.white};
   border-radius: 0 0 20px 20px;
   padding: 20px;
-  overflow-y: scroll;
   z-index: 9999;
+
+  @media (max-width: ${breakpoints.md}) {
+    overflow-y: scroll;
+  }
 `
 
 const stackStyles = css`
