@@ -1,5 +1,6 @@
 import POKEHUB from '@/assets/포케허브.png'
 import MYCARD from '@/assets/마이카드.png'
+import PORTFOLIO from '@/assets/포트폴리오.png'
 
 type Description = {
   content: string
@@ -102,7 +103,7 @@ export const projectData: projectDatas = [
     stack: ['React', 'TypeScript', 'Emotion', 'Framer-motion'],
     period: '2024.01.05 → 진행 중',
     projectType: '개인 프로젝트 / 프론트엔드',
-    img: '',
+    img: PORTFOLIO,
     url: {
       github: 'https://github.com/BearHumanS/react_portfolio',
       page: 'https://kihun-portfolio.vercel.app/',
