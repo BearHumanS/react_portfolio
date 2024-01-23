@@ -1864,6 +1864,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emailjs/browser@npm:^3.12.1":
+  version: 3.12.1
+  resolution: "@emailjs/browser@npm:3.12.1"
+  checksum: 6e78715e5e0a43ee7fdbfcef9fd2b722a69a977e545b25c0ed94a61e3d01c99f72f1de4394970337365975d599d459af9be040e489091675a6d474e69996f746
+  languageName: node
+  linkType: hard
+
 "@emotion/babel-plugin@npm:^11.11.0":
   version: 11.11.0
   resolution: "@emotion/babel-plugin@npm:11.11.0"
@@ -4770,6 +4777,13 @@ __metadata:
     kind-of: "npm:^6.0.2"
     shallow-clone: "npm:^3.0.0"
   checksum: 637753615aa24adf0f2d505947a1bb75e63964309034a1cf56ba4b1f30af155201edd38d26ffe26911adaae267a3c138b344a4947d39f5fc1b6d6108125aa758
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "clsx@npm:2.1.0"
+  checksum: c09c00ad14f638366ca814097e6cab533dfa1972a358da5b557be487168acbb25b4c1395e89ffa842a8a61ba87a462d2b4885bc9d4f8410b598f3cb339599cdb
   languageName: node
   linkType: hard
 
@@ -9541,6 +9555,7 @@ __metadata:
   dependencies:
     "@babel/preset-react": "npm:^7.23.3"
     "@craco/craco": "npm:^7.1.0"
+    "@emailjs/browser": "npm:^3.12.1"
     "@emotion/babel-plugin": "npm:^11.11.0"
     "@emotion/react": "npm:^11.11.3"
     "@emotion/styled": "npm:^11.11.0"
@@ -9566,6 +9581,7 @@ __metadata:
     react-router-dom: "npm:^6.21.1"
     react-scripts: "npm:5.0.1"
     react-simple-typewriter: "npm:^5.0.1"
+    react-toastify: "npm:^10.0.4"
     typescript: "npm:^4.4.2"
     web-vitals: "npm:^2.1.0"
   languageName: unknown
@@ -11428,6 +11444,18 @@ __metadata:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
   checksum: a9bc04d401be922e86ba9e648bc61021613217f47d07705e0ae03e7fb60ea3f1163ba99834ef7211020550d2db818e460fe3512e2360e047742d5d98dce1344b
+  languageName: node
+  linkType: hard
+
+"react-toastify@npm:^10.0.4":
+  version: 10.0.4
+  resolution: "react-toastify@npm:10.0.4"
+  dependencies:
+    clsx: "npm:^2.1.0"
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: 3d31edf81e8b394fd0085615fd7ba9fb9546c7cdae56e5334df67b58d65450c73af14a8fc163f19ceed03cfee7a344d1af1489422536f52c9516ca45e9b61a37
   languageName: node
   linkType: hard
 
