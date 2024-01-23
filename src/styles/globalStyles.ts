@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import { breakpoints } from './breakPoint'
 import { colorTheme } from './color'
 
 export default css`
@@ -151,5 +152,23 @@ export default css`
 
   * {
     box-sizing: border-box;
+  }
+
+  section {
+    @media (min-width: ${breakpoints.sm}) {
+      max-width: 640px;
+    }
+    @media (min-width: ${breakpoints.md}) {
+      max-width: 768px;
+    }
+    @media (min-width: ${breakpoints.lg}) {
+      max-width: 1024px;
+    }
+    @media (min-width: ${breakpoints.xl}) {
+      max-width: 1280px;
+    }
+    @media (min-width: ${breakpoints['2xl']}) {
+      max-width: 1536px;
+    }
   }
 `
