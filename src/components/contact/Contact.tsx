@@ -25,7 +25,7 @@ const Contact = () => {
   const {
     REACT_APP_SERVICE_ID = '',
     REACT_APP_TEMPLATE_ID = '',
-    REACT_APP_PUBLIC_KEY = '',
+    REACT_APP_PUBLIC = '',
   } = process.env
 
   const handleInputChange =
@@ -43,7 +43,7 @@ const Contact = () => {
           REACT_APP_SERVICE_ID,
           REACT_APP_TEMPLATE_ID,
           formRef.current,
-          REACT_APP_PUBLIC_KEY,
+          REACT_APP_PUBLIC,
         )
         .then(
           (result) => {
