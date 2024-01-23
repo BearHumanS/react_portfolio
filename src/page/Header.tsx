@@ -81,7 +81,7 @@ const Header = () => {
           {ITEMS.map((item) => (
             <ScrollIndicator targetId={item.en} setActiveTab={setActiveTab}>
               <Text
-                typography={activeTab === `${item.en}` ? 't3' : 't4'}
+                typography="t4"
                 css={activeTab === `${item.en}` ? activeTabStyle : undefined}
               >
                 <Typewriter

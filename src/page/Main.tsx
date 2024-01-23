@@ -1,5 +1,4 @@
 import Spacing from '@/components/common/Spacing'
-import { breakpoints } from '@/styles/breakPoint'
 import styled from '@emotion/styled'
 import About from './About'
 import ContactPage from './Contact'
@@ -30,11 +29,6 @@ const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1 1 100%;
-
-  @media (min-width: ${breakpoints.md}) {
-    width: 80%;
-  }
 `
 
 export default MainPage

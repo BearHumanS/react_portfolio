@@ -28,6 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@babel/preset-react", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:7.23.3"],\
           ["@craco/craco", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:7.1.0"],\
+          ["@emailjs/browser", "npm:3.12.1"],\
           ["@emotion/babel-plugin", "npm:11.11.0"],\
           ["@emotion/react", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:11.11.3"],\
           ["@emotion/styled", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:11.11.0"],\
@@ -53,6 +54,7 @@ const RAW_RUNTIME_STATE =
           ["react-router-dom", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:6.21.1"],\
           ["react-scripts", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:5.0.1"],\
           ["react-simple-typewriter", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:5.0.1"],\
+          ["react-toastify", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:10.0.4"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
@@ -3641,6 +3643,15 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/postcss-selector-parser",\
           "postcss-selector-parser"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@emailjs/browser", [\
+      ["npm:3.12.1", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/@emailjs-browser-npm-3.12.1-b0db3f28fd-10c0.zip/node_modules/@emailjs/browser/",\
+        "packageDependencies": [\
+          ["@emailjs/browser", "npm:3.12.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7374,6 +7385,15 @@ const RAW_RUNTIME_STATE =
           ["is-plain-object", "npm:2.0.4"],\
           ["kind-of", "npm:6.0.3"],\
           ["shallow-clone", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["clsx", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/clsx-npm-2.1.0-29d286e1de-10c0.zip/node_modules/clsx/",\
+        "packageDependencies": [\
+          ["clsx", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13060,6 +13080,7 @@ const RAW_RUNTIME_STATE =
           ["my_card", "workspace:."],\
           ["@babel/preset-react", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:7.23.3"],\
           ["@craco/craco", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:7.1.0"],\
+          ["@emailjs/browser", "npm:3.12.1"],\
           ["@emotion/babel-plugin", "npm:11.11.0"],\
           ["@emotion/react", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:11.11.3"],\
           ["@emotion/styled", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:11.11.0"],\
@@ -13085,6 +13106,7 @@ const RAW_RUNTIME_STATE =
           ["react-router-dom", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:6.21.1"],\
           ["react-scripts", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:5.0.1"],\
           ["react-simple-typewriter", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:5.0.1"],\
+          ["react-toastify", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:10.0.4"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
@@ -15995,6 +16017,33 @@ const RAW_RUNTIME_STATE =
           ["react-simple-typewriter", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:5.0.1"],\
           ["@types/react", "npm:18.2.45"],\
           ["@types/react-dom", "npm:18.2.18"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-toastify", [\
+      ["npm:10.0.4", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/react-toastify-npm-10.0.4-e28f40a449-10c0.zip/node_modules/react-toastify/",\
+        "packageDependencies": [\
+          ["react-toastify", "npm:10.0.4"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:10.0.4", {\
+        "packageLocation": "./.yarn/__virtual__/react-toastify-virtual-91343975d8/3/AppData/Local/Yarn/Berry/cache/react-toastify-npm-10.0.4-e28f40a449-10c0.zip/node_modules/react-toastify/",\
+        "packageDependencies": [\
+          ["react-toastify", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:10.0.4"],\
+          ["@types/react", "npm:18.2.45"],\
+          ["@types/react-dom", "npm:18.2.18"],\
+          ["clsx", "npm:2.1.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:9e56a5b1127e64753c278a04ff2d143adf6091b9f8e221903cd244b5b95bba1176f46a7056a74e69dc829da2805db2fd090f608125786602713642c7b6bcf314#npm:18.2.0"]\
         ],\
