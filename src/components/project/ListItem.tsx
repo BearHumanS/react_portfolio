@@ -73,8 +73,8 @@ const item = css`
     text-decoration: none;
   }
 
-  &:nth-child(4n + 1),
-  &:nth-child(4n + 4) {
+  &:nth-of-type(4n + 1),
+  &:nth-of-type(4n + 4) {
     grid-column-start: 1;
     grid-column-end: 3;
   }

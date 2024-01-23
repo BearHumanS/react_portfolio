@@ -79,7 +79,11 @@ const Header = () => {
 
         <Flex css={menutStyles}>
           {ITEMS.map((item) => (
-            <ScrollIndicator targetId={item.en} setActiveTab={setActiveTab}>
+            <ScrollIndicator
+              targetId={item.en}
+              setActiveTab={setActiveTab}
+              key={item.en}
+            >
               <Text
                 typography="t4"
                 css={activeTab === `${item.en}` ? activeTabStyle : undefined}
