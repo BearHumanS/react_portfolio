@@ -14,7 +14,13 @@ import { typographyTable } from '@/styles/typography'
 
 const About = () => {
   return (
-    <AboutFlex align="center" justify="center" height="100%" width="100%">
+    <AboutFlex
+      align="center"
+      justify="center"
+      height="100%"
+      width="100%"
+      wrap="nowrap"
+    >
       <Flex>
         <AnimatedCardComponent />
       </Flex>
