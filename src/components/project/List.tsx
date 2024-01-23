@@ -17,6 +17,8 @@ const List = ({ selectedId }: { selectedId: string }) => {
 }
 
 const list = css`
+  position: relative;
+  top: 35px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 3vmin;
