@@ -53,10 +53,10 @@ export const projectData: projectDatas = [
           '커뮤니티 기능을 위하여 Firebase를 활용한 사용자 인증 및 상태관리를 하였습니다.',
       },
       {
-        content: 'lighthouse 성능 점수 개선 진행 중',
+        content: 'lighthouse 성능 점수 개선 진행 중 입니다.',
       },
       {
-        content: '반응형 작업 진행 중',
+        content: '반응형 작업 진행 중 입니다.',
       },
     ],
     subject:
@@ -105,7 +105,7 @@ export const projectData: projectDatas = [
     img: '',
     url: {
       github: 'https://github.com/BearHumanS/react_portfolio',
-      page: '미배포',
+      page: 'https://kihun-portfolio.vercel.app/',
     },
     description: [
       {
@@ -118,6 +118,9 @@ export const projectData: projectDatas = [
       {
         content:
           '재미 및 Framer-motion을 공부하기 위해 인터렉티브한 요소들을 추가하였습니다.',
+      },
+      {
+        content: '반응형 작업 진행 중 입니다.',
       },
     ],
     subject:
