@@ -1,15 +1,18 @@
+import { MouseEvent } from 'react'
 import { projectData } from '@/lib/project'
 import { colors } from '@/styles/color'
 import { css } from '@emotion/react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Flex from '../common/Flex'
 import Spacing from '../common/Spacing'
 import Text from '../common/Text'
 import IconGithub from './IconGithub'
+import { breakpoints } from '@/styles/breakPoint'
 
 const Project = ({ params }: { params: string }) => {
   const project = projectData.find((data) => data.id === params)
+  const navigate = useNavigate()
 
   if (!project) {
     return <div>프로젝트를 찾을 수 없습니다.</div>
@@ -29,6 +32,12 @@ const Project = ({ params }: { params: string }) => {
 
   const { github, page } = url
 
+  const handleOverlayClick = (e: MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      navigate('/')
+    }
+  }
+
   return (
     <motion.div
       css={overlay}
@@ -36,8 +45,9 @@ const Project = ({ params }: { params: string }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.15 } }}
+      onClick={handleOverlayClick}
     >
-      <motion.div layoutId={`item-motion-${id}`} layout>
+      <motion.div css={contentBox} layoutId={`item-motion-${id}`} layout>
         <Link to="/" css={link}>
           <Text color="white" typography="t3">
             back
@@ -100,7 +110,7 @@ const Project = ({ params }: { params: string }) => {
 }
 
 const overlay = css`
-  z-index: 9999;
+  z-index: 8888;
   position: fixed;
   padding: 10vmin;
   background: rgba(0, 0, 0, 0.8);
@@ -112,6 +122,13 @@ const overlay = css`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const contentBox = css`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
 `
 
 const link = css`
@@ -140,12 +157,20 @@ const image = css`
     height: 100%;
     object-fit: contain;
   }
+
+  @media (max-width: ${breakpoints.md}) {
+    a {
+      padding: 10px;
+    }
+  }
 `
 
 const content = css`
   background: ${colors.white};
   border-radius: 0 0 20px 20px;
   padding: 20px;
+  overflow-y: scroll;
+  z-index: 9999;
 `
 
 const stackStyles = css`
