@@ -114,6 +114,7 @@ const Contact = () => {
         <textarea
           css={textareaStyles}
           rows={8}
+          required
           placeholder="Message"
           name="message"
           value={messageValue}
