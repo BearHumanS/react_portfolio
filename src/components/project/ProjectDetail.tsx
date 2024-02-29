@@ -38,7 +38,7 @@ const Project = ({ params }: { params: string }) => {
     projectType,
   } = project
 
-  const { github, page } = url
+  const { github, page, notion } = url
 
   const handleOverlayClick = (e: MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -77,6 +77,18 @@ const Project = ({ params }: { params: string }) => {
                   </a>
                 </Text>
               </motion.div>
+              <Spacing size={8} />
+
+              {notion && (
+                <motion.div whileHover={{ scale: 1.04 }}>
+                  <Text>
+                    <a href={notion} target="_blank" rel="noreferrer">
+                      🖱️초기 트러블 이슈
+                    </a>
+                  </Text>
+                </motion.div>
+              )}
+
               <Spacing size={8} />
               <Text typography="t6" color="grey3">
                 {period}
@@ -130,7 +142,6 @@ const overlay = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 `
 
 const contentBox = css`
@@ -142,6 +153,7 @@ const contentBox = css`
 `
 
 const link = css`
+  width: 0;
   text-align: right;
   display: block;
   margin-bottom: 1vmin;
@@ -150,22 +162,23 @@ const link = css`
 const image = css`
   display: block;
   width: 100%;
-  height: 50vmin;
+  height: 40vmin;
 
   a {
     background: ${colors.white};
     width: 100%;
     height: 100%;
     display: block;
-    border-radius: 20px 20px 0 0;
+    border-radius: 5px 5px 0 0;
     padding-top: 20px;
   }
 
   img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: contain;
+    margin: 0 auto;
   }
 
   @media (max-width: ${breakpoints.md}) {
@@ -177,12 +190,33 @@ const image = css`
 
 const content = css`
   background: ${colors.white};
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 5px 5px;
   padding: 20px;
   z-index: 9999;
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.xl}) {
+    overflow-y: scroll;
+  }
 
   @media (max-width: ${breakpoints.md}) {
     overflow-y: scroll;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${colors.black};
+    border-radius: 10px;
+    border: 4px solid ${colors.white};
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: ${colors.white};
+    border-radius: 5px;
   }
 `
 

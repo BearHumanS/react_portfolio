@@ -50,7 +50,7 @@ const Header = () => {
 
     for (const section of sections) {
       const element = document.getElementById(section)
-      if (element && window.scrollY >= element.offsetTop - 100) {
+      if (element && window.scrollY >= element.offsetTop - 70) {
         currentSection = section
       }
     }

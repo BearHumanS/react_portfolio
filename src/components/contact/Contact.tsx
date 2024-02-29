@@ -14,6 +14,7 @@ import { css } from '@emotion/react'
 import Spacing from '../common/Spacing'
 import { colors } from '@/styles/color'
 import { typographyTable } from '@/styles/typography'
+import { breakpoints } from '@/styles/breakPoint'
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null)
@@ -67,7 +68,7 @@ const Contact = () => {
   }
 
   return (
-    <Flex direction="column" width="50%" align="center">
+    <Flex direction="column" width="50%" align="center" css={container}>
       <motion.form
         css={fromStyles}
         ref={formRef}
@@ -80,7 +81,7 @@ const Contact = () => {
           css={inputStyles}
           type="text"
           required
-          placeholder="Name"
+          placeholder="*Name"
           name="name"
           value={nameValue}
           onChange={handleInputChange(setNameValue)}
@@ -92,7 +93,7 @@ const Contact = () => {
           css={inputStyles}
           type="email"
           required
-          placeholder="Email"
+          placeholder="*Email"
           name="email"
           value={emailValue}
           onChange={handleInputChange(setEmailValue)}
@@ -115,7 +116,7 @@ const Contact = () => {
           css={textareaStyles}
           rows={8}
           required
-          placeholder="Message"
+          placeholder="*Message"
           name="message"
           value={messageValue}
           onChange={handleInputChange(setMessageValue)}
@@ -132,6 +133,8 @@ const Contact = () => {
     </Flex>
   )
 }
+
+const container = css``
 
 const fromStyles = css`
   width: 100%;
@@ -164,6 +167,10 @@ const textareaStyles = css`
 
   &:focus {
     border: 2px solid ${colors.blue};
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.xl}) {
+    height: 150px;
   }
 `
 

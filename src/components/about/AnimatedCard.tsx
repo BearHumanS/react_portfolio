@@ -74,6 +74,16 @@ const AnimatedCard = styled(motion.div)`
   width: 428px;
   height: 591px;
 
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.xl}) {
+    width: 321px;
+    height: 443px;
+
+    img {
+      width: 321px;
+      height: 443px;
+    }
+  }
+
   @media (max-width: ${breakpoints.md}) {
     width: 214px;
     height: 296px;

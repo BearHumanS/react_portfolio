@@ -13,12 +13,15 @@ export interface projectDataProps {
   period: string
   projectType: string
   img: string
+  imgList?: string[]
   url: {
     github: string
     page: string
+    notion?: string
   }
   description: Description[]
   subject: string
+  review?: Description[]
 }
 
 type projectDatas = projectDataProps[]
@@ -35,7 +38,8 @@ export const projectData: projectDatas = [
       'Zustand',
       'React-Query',
       'Framer-motion',
-      'Poke API',
+      'PokeAPI',
+      'github-action',
     ],
     period: '2023.10.30 → 진행 중',
     projectType: '팀 프로젝트 / 프론트엔드',
@@ -43,6 +47,7 @@ export const projectData: projectDatas = [
     url: {
       github: 'https://github.com/side-project-pokehub/my-pokemon',
       page: 'https://my-poke-hub.vercel.app/',
+      notion: 'https://www.notion.so/e0116f25d5574a989954c03b6ab3c183',
     },
     description: [
       {
@@ -51,15 +56,29 @@ export const projectData: projectDatas = [
       },
       {
         content:
+          '사용자가 원하는 포켓몬의 카드를 제작하고, 다운로드 받을 수 있습니다.',
+      },
+      {
+        content:
           '커뮤니티 기능을 위하여 Firebase를 활용한 사용자 인증 및 상태관리를 하였습니다.',
       },
       {
-        content: 'lighthouse 성능 점수 개선 진행 중 입니다.',
+        content: '데스크탑 뷰 및 모바일 뷰 반응형으로 작업했습니다.',
       },
       {
-        content: '반응형 작업 진행 중 입니다.',
+        content:
+          'github-action을 사용해서 CI워크플로우는 린팅과 빌드 과정을 자동화하였고, CD워크플로우는 main브랜치에 머지 될 때 마다 자동으로 빌드 및 배포를 진행하고, 빌드된 결과물을 팀원들의 리포지토리로 push하여 배포 과정을 자동화 하였습니다.',
+      },
+      {
+        content:
+          'seo개선을 진행 중 입니다. (메타 태그 동적으로 적용, 사전 렌더링 적용, sitemap동적으로 생성 적용 예정)',
+      },
+      {
+        content:
+          'ver 1.01 배포 상태, 사용자들의 피드백 수용 및 추가 업데이트 진행 중',
       },
     ],
+
     subject:
       '서버 없이 할 수 있는 프로젝트를 찾다가 Poke API라는  RESTful API를 찾아서 간단한 포켓몬 도감 페이지를 구현하려 하였으나, 차별화를 두기 위해 포켓몬 커뮤니티를 구성하기로 설계 변경하여, Firebase 데이터베이스를 사용해서 사용자의 인증 및 상태관리하고, 포켓몬 도감 및 포켓몬 별 댓글 및 게시판 기능 등을 구현한 프로젝트입니다.',
   },
@@ -84,7 +103,7 @@ export const projectData: projectDatas = [
     },
     description: [
       {
-        content: '카드를 쉽게 발급하도록 도와주도록 설계한 프로젝트입니다.',
+        content: '사용자가 카드를 쉽게 발급할 수 있게 설계한 프로젝트입니다.',
       },
       {
         content: '처음으로 React-Query를 주도적으로 사용해봤습니다.',
@@ -118,13 +137,15 @@ export const projectData: projectDatas = [
       },
       {
         content:
-          '재미 및 Framer-motion을 공부하기 위해 인터렉티브한 요소들을 추가하였습니다.',
+          'About의 카드는 포케허브 프로젝트의 카드를 가져와서 만들었습니다. (포켓몬 능력치 600 이상은 600족이라고 불리는 높은 능력치 값입니다.)',
       },
       {
-        content: '반응형 작업 진행 중 입니다.',
+        content:
+          '재미 및 Framer-motion을 공부하기 위해 인터렉티브한 요소들을 추가하였습니다.',
       },
     ],
+
     subject:
-      'Emotion 및 Framer-motion 기술을 숙련할 수 있는 좋은 경험이었습니다. 많은 피드백 부탁드립니다.',
+      'Emotion 및 Framer-motion 기술을 숙련할 수 있는 좋은 경험이었습니다.',
   },
 ]
